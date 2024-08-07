@@ -1,0 +1,163 @@
+/* Import Slick Carousel styles */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* Body Background */
+body {
+  background-color: #f0f0f0; /* Light gray background */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for all content */
+.home-container {
+  padding: 20px;
+  min-height: 88vh;
+}
+
+/* Box Styling for Sections */
+.box {
+  background-color: #fff; /* White background for boxes */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  margin-bottom: 20px;
+}
+
+/* Flexbox Layout */
+.content-section,
+.feature-section {
+  display: flex;
+  justify-content: center;
+}
+.memory-slider-section {
+  margin-top: 20px;
+  height: 40vh;
+}
+.content-section {
+  margin-bottom: 20px;
+}
+
+.feature-section {
+  justify-content: space-between;
+}
+
+.text-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center align images */
+  align-items: center; /* Center align images vertically */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  border-radius: 8px; /* Rounded corners for images */
+  margin-right: 20px; /* Space between image and text */
+}
+
+/* Slider Styling */
+.memory-slider-section {
+  margin-top: 20px;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px; /* Add padding to create space between slides */
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+  margin: 0; /* Remove margin between images */
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Adjust spacing between dots and images */
+.slick-dots {
+  bottom: 10px; /* Adjust vertical position of dots */
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 24px;
+}
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+  .content-section,
+  .feature-section {
+    flex-direction: row;
+  }
+  .box.memory-slider-section {
+    display: none;
+}
+  .text-content {
+    margin-right: 20px;
+    max-width: 45%; /* Adjust width for better spacing */
+  }
+  .slick-slider.slick-initialized {
+    height: 12vh;
+}
+
+  .image-container {
+    max-width: 45%; /* Adjust width for better spacing */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+  .content-section,
+  .feature-section {
+    flex-direction: column;
+  }
+  .box.memory-slider-section {
+    display: none;
+}
+  .text-content,
+  .image-container {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .slick-slider.slick-initialized {
+    height: 12vh;
+}
+
+  .slick-slide {
+    padding: 0; /* Remove padding between slides on mobile */
+  }
+}
+
+/* Button Section */
+.button-section {
+  text-align: center;
+  margin-top: 20px;
+}
+.slick-slider .slick-track, .slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+  height: 280px;
+}
+.action-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #0056b3; /* Darker shade of the primary color */
+}
